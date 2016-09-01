@@ -1,0 +1,18 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="collective.behavior.autolink">
+
+  <five:registerPackage package="." />
+  <i18n:registerTranslations directory="locales" />
+
+  <permission
+      id="collective.behavior.autolink.Setup"
+      title="collective.behavior.autolink: Setup"
+      />
+
+  <include file="profiles.zcml" />
+
+</configure>

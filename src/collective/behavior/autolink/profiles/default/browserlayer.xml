@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<layers>
+  <layer
+      name="collective.behavior.autolink"
+      interface="collective.behavior.autolink.interfaces.IBrowserLayer"
+      />
+</layers>
