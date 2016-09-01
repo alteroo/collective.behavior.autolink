@@ -15,4 +15,10 @@
 
   <include file="profiles.zcml" />
 
+  <adapter
+      for="* .interfaces.IAutoLinkLayer"
+      name="collective.behavior.autolink"
+      factory=".transform.AutoLinkTransform"
+      />
+
 </configure>

@@ -2,6 +2,6 @@
 from zope.interface import Interface
 
 
-class IBrowserLayer(Interface):
+class IAutoLinkLayer(Interface):
 
     """A layer specific for this add-on product."""

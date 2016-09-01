@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Ensure add-on is properly installed and uninstalled."""
 from collective.behavior.autolink.config import PROJECTNAME
-from collective.behavior.autolink.interfaces import IBrowserLayer
+from collective.behavior.autolink.interfaces import IAutoLinkLayer
 from collective.behavior.autolink.testing import INTEGRATION_TESTING
 from plone.browserlayer.utils import registered_layers
 
@@ -22,7 +22,7 @@ class InstallTestCase(unittest.TestCase):
         self.assertTrue(qi.isProductInstalled(PROJECTNAME))
 
     def test_addon_layer(self):
-        self.assertIn(IBrowserLayer, registered_layers())
+        self.assertIn(IAutoLinkLayer, registered_layers())
 
     def test_setup_permission(self):
         permission = 'collective.behavior.autolink: Setup'
@@ -53,4 +53,4 @@ class UninstallTestCase(unittest.TestCase):
         self.assertFalse(self.qi.isProductInstalled(PROJECTNAME))
 
     def test_addon_layer_removed(self):
-        self.assertNotIn(IBrowserLayer, registered_layers())
+        self.assertNotIn(IAutoLinkLayer, registered_layers())

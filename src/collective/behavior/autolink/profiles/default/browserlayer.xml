@@ -2,6 +2,6 @@
 <layers>
   <layer
       name="collective.behavior.autolink"
-      interface="collective.behavior.autolink.interfaces.IBrowserLayer"
+      interface="collective.behavior.autolink.interfaces.IAutoLinkLayer"
       />
 </layers>
